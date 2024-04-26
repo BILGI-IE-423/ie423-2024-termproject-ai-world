@@ -42,4 +42,4 @@ print(filtered_df.head(25000))
 # Çıktıdaki sütun isimlerini yazdırma
 print(filtered_df.columns)
 
-![Açıklama](C:\Users\berk\Downloads\Ekran Alıntısı.PNG)
+
