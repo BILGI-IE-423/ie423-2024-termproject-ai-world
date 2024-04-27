@@ -1,1 +1,43 @@
+import pandas as pd
 
+# Dosya yollarını belirtin
+netflix_file = "C:/Users/berk/Downloads/netflix_titles.csv"
+prime_file = "C:/Users/berk/Downloads/amazon_prime_titles.csv"
+bechdel_file = "C:/Users/berk/Downloads/Bechdel.csv"
+mergedmoviegenre_file = "C:/Users/berk/Downloads/MergedMovieGenre.csv"
+
+# Veri çerçevelerini okuyun
+netflix_df = pd.read_csv(netflix_file)
+prime_df = pd.read_csv(prime_file)
+bechdel_df = pd.read_csv(bechdel_file, encoding='latin-1', on_bad_lines='skip')
+mergedmoviegenre_df = pd.read_csv(mergedmoviegenre_file)
+
+# netflix ve prime dosyalarını "title" alanına göre birleştirerek aynı kayıtları 1 kez al
+merged_df = pd.concat([netflix_df, prime_df]).drop_duplicates(subset=['title'])
+
+# bechdel dosyasından ilgili bilgileri "title" alanına göre merged_df'e ekleyerek, her iki veri kümesinde de olan kayıtları göster
+final_df = pd.merge(merged_df, bechdel_df, on='title', how='inner', suffixes=('_merged', '_bechdel'))
+
+# MergedMovieGenre datasını kullanarak final_df ile eşleştirme
+merged_with_genre_df = pd.merge(final_df, mergedmoviegenre_df, on='title', how='inner')
+
+# Belirtilen sütun isimlerini çıkararak çıktıdaki sütunları göster
+unwanted_columns = ['show_id', 'no', 'imdbid', 'id', 'imdbId']
+filtered_df = merged_with_genre_df.drop(unwanted_columns, axis=1)
+
+# Çıktıdaki tüm sütun isimlerini alın
+all_columns = filtered_df.columns.tolist()
+
+# 'type' ve 'title' sütunlarının yerlerini değiştirme
+all_columns.remove('type')
+all_columns.remove('title')
+new_column_order = ['title', 'type'] + all_columns
+
+# Sütunları yeni sıraya göre güncelleme
+filtered_df = filtered_df[new_column_order]
+
+# Sonuç veri çerçevesini ekrana bastırma
+print(filtered_df.head(25000))
+
+# Çıktıdaki sütun isimlerini yazdırma
+print(filtered_df.columns)
