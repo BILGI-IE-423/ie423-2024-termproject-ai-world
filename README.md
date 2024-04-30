@@ -129,5 +129,12 @@ gantt
     
 
 ```
+#### Contributors
+Berk Ayata 120203013
 
+Burcu Ağu 116203010
+
+Canan Selek 120203050
+
+Özge Sıla Çakmak 120203055
 
