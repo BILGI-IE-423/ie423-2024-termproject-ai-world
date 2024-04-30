@@ -23,6 +23,66 @@ In the final merging stage of the datasets, the Movie Genre from its Poster data
 
 Then, the process of finding the common datas was done with this new dataset.
 
+### Detalied Explanation of Preprocessing Parts
+#### Libraries Used
+pandas, numpy, seaborn, matplotlib.pyplot, sklearn.datasets, sklearn.metrics, sklearn.model_selection, sklearn.preprocessing.OneHotEncoder, sklearn.preprocessing.StandardScaler, sklearn.svm.SVC, sklearn.linear_model.LogisticRegression, sklearn.neighbors.KNeighborsClassifier, sklearn.metrics.confusion_matrix, sklearn.metrics.accuracy_score, sklearn.metrics.precision_score, sklearn.metrics.recall_score, sklearn.metrics.f1_score, warnings, sklearn.exceptions.ConvergenceWarning
+
+#### In[3] 
+This code fetches data from four different URLs containing CSV files, reads them into Pandas DataFrames, and stores them in a list called dfs.
+
+#### In[4]
+This code line assigns them to variables with more meaningful names 
+
+#### In[6]
+This loop takes each movie title in the 'Title' column of a DataFrame, splits the title based on the year enclosed in parentheses, and adds this information to new columns named 'title' and 'year'. Thus, each movie title is parsed into movie name and year, respectively.
+Also, "Title", which starts with a capital letter, was corrected to "title".
+
+#### In[8,9,10]
+The existence of duplicate data was checked.
+No duplicate data was found in the Netflix, Amazon, and Bechdel datasets.
+
+#### In[11]
+Duplicate data in the poster dataset was checked, and 593 duplicate datasets were found.
+In this code, the drop_duplicates() method is used to remove duplicate rows. As a result, a DataFrame without any duplicate data is obtained.
+
+#### In[12]
+The Netflix and Amazon datasets were merged based on the 'title' column, combining the datasets into one.
+
+#### In[13]
+This code merges three DataFrames: merged_df and bechdel_df are merged based on the 'title' column into merged_bnp_df, and then merged_bnp_df and movieposter_df are merged based on the 'title' column into allmerged_df.
+
+#### In[14]
+It was checked whether the merged data frame contains duplicates.
+
+#### In[15]
+In this line of code, unwanted columns are removed from the data set. The extracted columns include 'show_id', 'date_added','imdbid','id', 'imdbId', 'listed_in', 'description' 'Unnamed: 0', 'year_x','Imdb Link', 'year_y'.
+Then the columns were sorted in the desired order.
+
+#### In[16]
+Null data was checked in this line of code.
+There were 17 null data in the cast column, 317 in the country column, and 92 in the director column. The deletion of these null data was done in the next lines of code.
+
+#### In[18]
+The first three actors' names from each row in the 'cast' column have been extracted, and they have been labeled as cast1, cast2, and cast3. The other 'cast' column has been removed.
+
+#### In[19]
+Columns have been checked.
+
+#### In[20]
+The null values in the previous lines were deleted, and it was checked whether there was null data after the dropping process.
+
+#### In[21]
+This code splits each entry in the 'Genre' column by the '|' character and takes the first category. Similarly, it splits each entry in the 'country' column by the ',' character and takes the first country.
+
+#### In[23]
+This code ensures that each entry in the 'duration' column contains only the numerical value found at the beginning.
+
+#### In[24]
+This line of code is to detect whether there is duplicate data. According to the results, 18 duplicate data were found.
+
+#### In[25]
+This code removes duplicate rows in the 'cleaned_df' DataFrame.
+
 
 ### *Sources of Data Sets*
 [Amazon Prime Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows)
