@@ -2,8 +2,14 @@
 ## *Director Prediction Based on the Film's Characteristics*
 
 
-### *Principal Goals of the Project* 
+## *Principal Goals of the Project* 
 The film industry is a complex environment where various factors influence the decisions behind movie production. One crucial aspect is the choice of director, whose vision and style can impact the outcome of a film.The main purpose of the project is to predict the director by taking into account various features of the films. When generating predictions, factors including the movie's genre, cast, release year, length, type, rating, and description of the film are considered. In addition to these characteristics, Bechdel test scores and movie posters are also utilized to predict the director. These features have been considered to add new perspectives to predicting the film director.By incorporating a diverse range of features, the aim is to build a comprehensive model that can accurately predict the director of a given film.
+
+## *Resarch Questions* 
+- How accurately can we predict the director of a movie based on features such as cast, duration, genre, Bechdel score, IMDb score?
+- What are the most significant factors influencing the choice of director for a movie, as identified by the predictive model?
+- How does the performance of different machine learning algorithms compare in predicting movie directors based on film characteristics?
+
 
 ## *Utilizing of the datasets*
 First of all, two data sets contining Amazon Prime and Netflix movies and TV shows are used. These data sets provide details on the movie's titles, directors, casts, countries, and genres.
@@ -26,6 +32,8 @@ The following step in preprocessing involves checking for outliers.The 'Duration
 Following this, for each movie in the 'no_outlier_df' DataFrame, it calculates the normalized average of RGB components. This represents the percentage of each color in the image. These percentages are then added to new columns named 'Red', 'Green', and 'Blue'. If accessing an image fails, an error counter is incremented. Finally, the updated DataFrame, containing the RGB components of each image, is printed. Dropping operations were later carried out for the 55 URLs that were successfully accessed. The poster column was removed later because the desired red, green and blue color measurements were obtained from the posters. 
 
 The next stage after removing the poster column is the encoding stage. Encoding has been performed using OneHotEncoder. By selecting the 'Cast1', 'Cast2', and 'Cast3' columns, encoding has been done based on the 'cast' column. Before the encoding process began, the shape of the DataFrame was [592 rows × 16 columns]. After the initial encoding step, it reached [646 rows × 1463 columns].Following the encoding process based on the 'cast' column, encoding was then performed for the 'type', 'country', 'rating_merged', and 'Genre' columns. Subsequently, null values were dropped, resulting in the dataset becoming 538 rows × 1532 columns. After the encoding steps, the director column was checked. It was determined that there were 440 unique director entries. Next, the frequency of each director entry was examined. In addition to the previous encoding steps, a LabelEncoder process was also applied to the 'director' column. Finally, the columns were arranged in the desired order and we have a total of [538 rows x 1532 columns] data available.
+
+
 
 
 
@@ -64,6 +72,7 @@ gantt
     
 
 ```
+
 ### *Sources of Data Sets*
 [Amazon Prime Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows)
 
@@ -74,7 +83,7 @@ gantt
 [Movie Genre from its Poster](https://www.kaggle.com/datasets/neha1703/movie-genre-from-its-poster)
 
 
-#### Contributors
+#### *Contributors*
 Berk Ayata 120203013
 
 Burcu Ağu 116203010
