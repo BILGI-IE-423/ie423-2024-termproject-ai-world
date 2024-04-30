@@ -19,7 +19,7 @@ Merging Netflix Movies and TV Shows & Amazon Prime Movies and TV Shows data sets
 
 The dataset combined in the previous stage and the common data in the Movie Becdel Test Scores dataset were taken,approximately 1300 data were obtained. The process of finding common data was sone based on the "title" columns.
 
-In the final memrging stage of the datasets, the Movie Genre from its Poster dataset was utilized. At this stage, in order to process the data, a change had to be made in the "Title" colums in this "Movie Genre from its Poster" dataset. Since the film names were found in dataset like "Toy Story(1995)", matching couldn be achieved, and a new dataset containing seperated film names as "title" and years as "year" was created. 
+In the final merging stage of the datasets, the Movie Genre from its Poster dataset was utilized. At this stage, in order to process the data, a change had to be made in the "Title" column in this "Movie Genre from its Poster" dataset. Since the film names were found in dataset like "Toy Story(1995)", matching couldn't be achieved, and a new dataset containing seperated film names as "title" and years as "year" was created. 
 
 Then, the process of finding the common datas was done with this new dataset.
 
