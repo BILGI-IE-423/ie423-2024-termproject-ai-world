@@ -7,7 +7,7 @@ The film industry is a complex environment where various factors influence the d
 
 ## *Resarch Questions* 
 - How accurately can we predict the director of a movie based on features such as cast, duration, genre, Bechdel score, IMDb score?
-- What are the most significant factors influencing the choice of director for a movie, as identified by the predictive model?
+- What are the most significant factors influencing the choice of director for a movie?
 - How does the performance of different machine learning algorithms compare in predicting movie directors based on film characteristics?
 
 
@@ -34,6 +34,12 @@ Following this, for each movie in the 'no_outlier_df' DataFrame, it calculates t
 The next stage after removing the poster column is the encoding stage. Encoding has been performed using OneHotEncoder. By selecting the 'Cast1', 'Cast2', and 'Cast3' columns, encoding has been done based on the 'cast' column. Before the encoding process began, the shape of the DataFrame was [592 rows × 16 columns]. After the initial encoding step, it reached [646 rows × 1463 columns].Following the encoding process based on the 'cast' column, encoding was then performed for the 'type', 'country', 'rating_merged', and 'Genre' columns. Subsequently, null values were dropped, resulting in the dataset becoming 538 rows × 1532 columns. After the encoding steps, the director column was checked. It was determined that there were 440 unique director entries. Next, the frequency of each director entry was examined. In addition to the previous encoding steps, a LabelEncoder process was also applied to the 'director' column. Finally, the columns were arranged in the desired order and we have a total of [538 rows x 1532 columns] data available.
 
 
+## *Next Steps*
+- Choosing suitable machine learning algorithms for the predicting.
+- Splitting the preprocessed dataset into train and test sets.
+- Model training, validation and testing.
+- Model evuluation
+  
 
 
 
