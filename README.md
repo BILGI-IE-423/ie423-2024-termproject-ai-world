@@ -19,7 +19,7 @@ In addition, the data set containing Bechdel tests scores of movies is used.
 A separate data set is used to obtain the necessary information about the posters of the movies.
 
 ## *Some of the Utilized Libraries*
-The libraries pandas, numpy, seaborn, matplotlib, sklearn, sklearn, TensorFlow Keras have been used in this project. 
+The libraries pandas, numpy, seaborn, matplotlib, sklearn, sklearn, TensorFlow Keras, PIL, io,  have been used in this project. 
 
 ## *Preprocessing Steps*
 
