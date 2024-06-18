@@ -216,15 +216,15 @@ gantt
        Scaling                                            :done, des9, 2024-05-05, 5d
        Method Determination                               :done, des10, 2024-05-05, 5d
        Model Training                                     :done, des11, 2024-05-10, 5d
-       Model Validation                                   :done, des12, 2024-05-15, 4d
+      
 
        section Evaluating
-       Model Testing                                      :done, des13, 2024-05-20,5d
-       Model Evaluation                                   :done, des14, 2024-05-25, 5d
+       Model Testing                                      :done, des12, 2024-05-20,5d
+       Model Evaluation                                   :done, des13, 2024-05-25, 5d
 
        section Finalization
-       Designing                                          :done, des15, 2024-06-01,5d
-       Publishing                                         :done, des16, 2024-06-18, 1d
+       Final Checks                                       :done, des14, 2024-06-01,5d
+       Publishing                                         :done, des15, 2024-06-18, 1d
     
 
 ```
