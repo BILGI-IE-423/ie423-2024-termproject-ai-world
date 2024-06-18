@@ -65,19 +65,19 @@ Some posters selected according to the clusters created are listed below.
   ![WhatsApp Image 2024-06-18 at 18 44 15 (2)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/a15d4c4a-0fd2-45f4-908b-fd5bf6753422)
   ![WhatsApp Image 2024-06-18 at 18 44 15 (3)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/9a6fc63b-032b-4944-b9f2-544121e3703c)
 
-  - Cluster 3
+- Cluster 3
     
   ![WhatsApp Image 2024-06-18 at 18 44 45](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/3bd5909e-01ea-4d29-9461-c4dc99669818)
   ![WhatsApp Image 2024-06-18 at 18 44 46](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/a983c810-f1af-43c5-864e-6be8edfc4595)
   ![WhatsApp Image 2024-06-18 at 18 44 46 (1)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/106c61eb-a05c-4c7d-ab9a-785963546b62)
 
-  - Cluster 4
+ - Cluster 4
     
     ![WhatsApp Image 2024-06-18 at 18 45 16](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/7fff6b1c-ea2b-4555-94a8-effce0b913f3)
     ![WhatsApp Image 2024-06-18 at 18 45 16 (1)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/36df956c-d68d-4584-b085-3956ad1b748b)
     ![WhatsApp Image 2024-06-18 at 18 45 16 (2)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/53e465a4-6aea-4ea0-b49a-091ea0c7d76b)
 
-  - Cluster 5
+ - Cluster 5
 
      ![WhatsApp Image 2024-06-18 at 18 45 54](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/66dedb71-3caa-4487-9bf6-8b4cdebc4aec)
     ![WhatsApp Image 2024-06-18 at 18 45 54 (1)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/d3b40cb0-01e0-4f2c-9517-0bd2e7f78e7d)
