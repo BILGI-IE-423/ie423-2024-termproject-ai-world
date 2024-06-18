@@ -32,7 +32,10 @@ In the next step, the first three actors' names from each row in the 'cast' colu
 
 The following step in preprocessing involves checking for outliers.The 'Duration' column was examined for outliers, and the data points with a value equal to 1, namely [136, 169, 221, 229, 246, 247], were removed from the dataset. 
 
-![Ekran görüntüsü 2024-06-18 145254](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/f0b7f6fc-5bdf-400e-8308-0ac4d33784e5)
+<div align="center">
+    <img src="https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/f0b7f6fc-5bdf-400e-8308-0ac4d33784e5" alt="Ekran görüntüsü 2024-06-18 145254" width="700">
+</div>
+<div align="left">
 
 The function f.get_ydata was used. No outlier data was found for the Bechdel test, except for the 'Duration' column. As data dropping operations are performed, inconsistencies arise with the indices. Therefore, to prevent this, the index count is reset. 
 
@@ -99,19 +102,58 @@ In addition to the previous encoding steps, a LabelEncoder process was also appl
 ***
 Since there was not enough data for each director at this stage, this posed a problem in finding the appropriate model. For this reason, directors were divided into clusters according to the number of occurrences in the data set. In the data set, directors with 1 or 2 films were divided into class0, directors with 3 or 4 films were divided into class1, and similarly, directors with 5 or 6 films were divided into class2. After completing this process, label coding was applied to the newly formed clusters.
 
-From the following graph, it can be seen that directors that are repeated only once is more that 350 while directors that are repeated 6 times is less than 50. This shows the imbalance in the data.
-![WhatsApp Image 2024-06-18 at 18 39 37](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/87c2b488-d261-4cfd-b350-cca8e0a231c1)
+<div align="center">
+    <img src="https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/87c2b488-d261-4cfd-b350-cca8e0a231c1" alt="WhatsApp Image 2024-06-18 at 18 39 37" width="800">
+</div>
+<div align="left">
 
 
 T-SNE, a nonlinear data reduction technique that takes multidimensional data and uses it to represent the original data in two dimensions while preserving the original high-dimensional space between datasets, was used. In this way, a data set that separates directors according to the number of films was observed. You can see this in the following graph. 
 
-![Ekran görüntüsü 2024-06-18 173920](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/3c27d03c-e11b-43ce-b3fe-494066859654)
+<div align="center">
+    <img src="https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/3c27d03c-e11b-43ce-b3fe-494066859654" alt="Ekran görüntüsü 2024-06-18 173920" width="800">
+</div>
+<div align="left">
 
-Additionally, the following graphs were generated to visualize the distribution of various features in the dataset within the grouping results.
+Additionally, the following graphs were generated to visualize the distribution of various features in the dataset.
 
-![Ekran görüntüsü 2024-06-18 090058](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/1376500d-b166-46eb-a144-8a44a75b0c56)
+ <div align="center">
+  <img src="https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/5a308b33-20a2-4053-99e5-106afb925c00" alt="Ekran görüntüsü 2024-06-18 201201" width="1200">
+ </div>
 
-![Ekran görüntüsü 2024-06-18 090111](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/39742f30-d0eb-42e0-bc3e-5ef437cbca0f)
+----
+
+ <div align="center">
+  <img src="https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/c1c86d62-49ad-43d8-b5de-7c46c904bc52" alt="Ekran görüntüsü 2024-06-18 201319" width="1200">
+ </div>
+
+-----
+
+
+ <div align="center">
+  <img src="https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/5cf165ff-6e01-4431-b5a2-f6826489ef80" alt="Ekran görüntüsü 2024-06-18 201240" width="800">
+ </div>
+
+-----
+
+   <div align="center">
+    <img src="https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/9c73f6e6-0766-41d9-a395-ec4bd6fe2d92" alt="Ekran görüntüsü 2024-06-18 201253" width="700">
+ </div>
+
+-----
+ <div align="center">
+<img src="https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/1376500d-b166-46eb-a144-8a44a75b0c56" alt="Ekran görüntüsü 2024-06-18 090058" width="800">
+ </div>
+
+-----
+
+<div align="center">
+<img src="https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/39742f30-d0eb-42e0-bc3e-5ef437cbca0f" alt="Ekran görüntüsü 2024-06-18 090111" width="800"
+ </div>
+
+<div align="left">
+
+
 
 #### You can click the link below for interactive graphs
 [Interactive Graphs](https://app.powerbi.com/groups/me/reports/e04c71c1-601f-4fc9-b530-55bd7706bbba?ctid=da2fd848-1e41-4299-b410-7b1ec11c469b&pbi_source=linkShare)
@@ -136,6 +178,13 @@ We used Accuracy, Precision, Recall metrics and ROC curve methods to evaluate mo
 - Precision: Precision is the rate at which the samples predicted by the model to be positive are actually positive, and the value of this metric for the test set is equal to 0.3036 as a macro average.
 - Recall: Recall measures how much of the true positive samples the model can accurately predict and was measured at 0.3297 for the test set.
 - ROC & AUC: ROC is a probability curve and the area under it, AUC, represents the degree or measure of separability. As the area under the curve increases, the discrimination performance between classes increases. These areas were found to be 0.52 for class 0, 0.59 for class 1, and 0.94 for class 2.
+
+  The created ROC curves are shown below.
+
+<div align="center">
+    <img src="https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/74bb2c93-c521-418b-9916-cd25196ac35e" alt="Ekran görüntüsü 2024-06-18 210041" width="800">
+</div>
+<div align="left">
 
 ## **Future Works**
 
