@@ -35,6 +35,10 @@ The following step in preprocessing involves checking for outliers.The 'Duration
 ![Ekran görüntüsü 2024-06-18 145254](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/f0b7f6fc-5bdf-400e-8308-0ac4d33784e5)
 
 The function f.get_ydata was used. No outlier data was found for the Bechdel test, except for the 'Duration' column. As data dropping operations are performed, inconsistencies arise with the indices. Therefore, to prevent this, the index count is reset. 
+
+##### You can click the link below for interactive graphs
+[Interactive Graphs](https://app.powerbi.com/groups/me/reports/e04c71c1-601f-4fc9-b530-55bd7706bbba?ctid=da2fd848-1e41-4299-b410-7b1ec11c469b&pbi_source=linkShare)
+
 ### **RGB** 
 
 Following this, for each movie in the 'no_outlier_df' DataFrame, it calculates the normalized average of RGB components. This represents the percentage of each color in the image. These percentages are then added to new columns named 'Red', 'Green', and 'Blue'. If accessing an image fails, an error counter is incremented. Finally, the updated DataFrame, containing the RGB components of each image, is printed. 
@@ -55,6 +59,12 @@ In addition to the previous encoding steps, a LabelEncoder process was also appl
 Since there was not enough data for each director at this stage, this posed a problem in finding the appropriate model. For this reason, directors were divided into clusters according to the number of occurrences in the data set. In the data set, directors with 1 or 2 films were divided into class0, directors with 3 or 4 films were divided into class1, and similarly, directors with 5 or 6 films were divided into class2. After completing this process, label coding was applied to the newly formed clusters. It used t-sne, a nonlinear data reduction technique that takes multidimensional data and uses it to represent the original data in two dimensions while preserving the original high-dimensional space between datasets. In this way, a data set that separates directors according to the number of films was observed. You can see this in the following graph. 
 
 ![Ekran görüntüsü 2024-06-18 173920](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/3c27d03c-e11b-43ce-b3fe-494066859654)
+
+Additionally, the following graphs were generated to visualize the distribution of various features in the dataset within the grouping results.
+
+![Ekran görüntüsü 2024-06-18 090058](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/1376500d-b166-46eb-a144-8a44a75b0c56)
+
+![Ekran görüntüsü 2024-06-18 090111](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/39742f30-d0eb-42e0-bc3e-5ef437cbca0f)
 
 ## *Model Training*
 
