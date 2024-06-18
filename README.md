@@ -176,7 +176,7 @@ gantt
        section Finalization
        Designing                                          :done, des15, 2024-06-01,7d
        Coding                                             :done, des16, 2024-06-05,10d
-       Publishing                                         :done, des17, 2024-06-16, 1d
+       Publishing                                         :done, des17, 2024-06-18, 1d
     
 
 ```
