@@ -46,8 +46,7 @@ Following this, for each movie in the 'no_outlier_df' DataFrame, it calculates t
 
 VGG16 ( Visual Geometry Group) is a object detection and classification algorithm which is used for image object detection, image classification and facial recognition. We utilized VGG16 to extract features from posters and cluster them based on similarities. While clustering, we determined the number of clusters using elbow method as 6. 
 
-From the following graph, it can be seen that directors that are repeated only once is more that 350 while directors that are repeated 6 times is less than 50. This shows the imbalance in the data.
-![WhatsApp Image 2024-06-18 at 18 39 37](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/87c2b488-d261-4cfd-b350-cca8e0a231c1)
+
 
 From inspection, it can be seen that in cluster 1 posters with seas and blue colour are together, in cluster 2 main focus of the poster is human figures.  In cluster 3 posters are usually black and White with bigger text sizes than cluster 1 and 2. In cluster 4 posters are usually yellow and orange with smaller text sizes.  In cluster 5 main focus of the poster is once again human figures but now text size, colors and figure placement in the posters are different. And finally in the last cluster, posters get more colorful with green, pink, and red colours.
 
@@ -98,7 +97,13 @@ The next stage after removing the poster column is the encoding stage. Encoding 
 In addition to the previous encoding steps, a LabelEncoder process was also applied to the 'director' column. We also applied label encoding for clusters created based on similarity with features coming out of vgg16.
 
 ***
-Since there was not enough data for each director at this stage, this posed a problem in finding the appropriate model. For this reason, directors were divided into clusters according to the number of occurrences in the data set. In the data set, directors with 1 or 2 films were divided into class0, directors with 3 or 4 films were divided into class1, and similarly, directors with 5 or 6 films were divided into class2. After completing this process, label coding was applied to the newly formed clusters. T-SNE, a nonlinear data reduction technique that takes multidimensional data and uses it to represent the original data in two dimensions while preserving the original high-dimensional space between datasets, was used. In this way, a data set that separates directors according to the number of films was observed. You can see this in the following graph. 
+Since there was not enough data for each director at this stage, this posed a problem in finding the appropriate model. For this reason, directors were divided into clusters according to the number of occurrences in the data set. In the data set, directors with 1 or 2 films were divided into class0, directors with 3 or 4 films were divided into class1, and similarly, directors with 5 or 6 films were divided into class2. After completing this process, label coding was applied to the newly formed clusters.
+
+From the following graph, it can be seen that directors that are repeated only once is more that 350 while directors that are repeated 6 times is less than 50. This shows the imbalance in the data.
+![WhatsApp Image 2024-06-18 at 18 39 37](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/87c2b488-d261-4cfd-b350-cca8e0a231c1)
+
+
+T-SNE, a nonlinear data reduction technique that takes multidimensional data and uses it to represent the original data in two dimensions while preserving the original high-dimensional space between datasets, was used. In this way, a data set that separates directors according to the number of films was observed. You can see this in the following graph. 
 
 ![Ekran görüntüsü 2024-06-18 173920](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/3c27d03c-e11b-43ce-b3fe-494066859654)
 
