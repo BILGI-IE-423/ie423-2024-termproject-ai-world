@@ -45,7 +45,7 @@ The next stage after removing the poster column is the encoding stage. Encoding 
 In addition to the previous encoding steps, a LabelEncoder process was also applied to the 'director' column. We also applied label encoding for clusters created based on similarity with features coming out of vgg16.
 
 ***
-Since we did not have enough data for each director at this stage, this posed a problem for our model. That's why we divided the directors into clusters according to the number of occurrences in our data set. In the data set, we separated the directors with 1 or 2 films as class0, the directors with 3 or 4 films as class1, and similarly the directors with 5 or 6 films as class2. After completing this process, we applied label encoding for the newly formed clusters. We utilized t-sne, which is a nonlinear data reduction technique that takes multidimensional data and uses it to represent the original data in two dimensions while maintaining the original high-dimensional space between the data sets.
+Since we did not have enough data for each director at this stage, this posed a problem for our model. That's why we divided the directors into clusters according to the number of occurrences in our data set. In the data set, we separated the directors with 1 or 2 films as class0, the directors with 3 or 4 films as class1, and similarly the directors with 5 or 6 films as class2. After completing this process, we applied label encoding for the newly formed clusters. We utilized t-sne, which is a nonlinear data reduction technique that takes multidimensional data and uses it to represent the original data in two dimensions while maintaining the original high-dimensional space between the data sets. In this way, we were able to see what the data set that separates the directors according to the number of films found looks like.
 
 ## *Model Training*
 
@@ -56,9 +56,17 @@ The best parameters and average scores found are as follows.
 - Best Mean Parameters for SVM Regression : C': 0.5, 'Kernel': 'linear', 'Class Weight': 'balanced',  with a mean score of 0.8769
 - Best Mean Parameters for kNN : 'neighbors': 9, 'Class Weight': 'uniform',  with a mean score of 0.8744
 - Best Mean Parameters for AdaBoost : 'n_estimators': 50, 'learning_rate': 0.01,  with a mean score of 0.8744
-- Best Mean Parametersfor Neural Network : {'Hidden Layers': (50,), 'Activation': 'tanh', 'Alpha': 0.01},  with a mean score of 0.8719
+- Best Mean Parameters for Neural Network : {'Hidden Layers': (50,), 'Activation': 'tanh', 'Alpha': 0.01},  with a mean score of 0.8719
 
 According to the above results, the most suitable model was determined as SVM and therefore the SVM model was used in the determination phase.
+
+## **Evaluation of Model Performance**
+
+We used Accuracy, Precision, Recall metrics and ROC curve methods to evaluate model performance. 
+- Accuracy: Accuracy is the ratio of examples that the model predicted correctly to the total predictions and it  is equal to 0.9020 for our test set.
+- Precision: Precision is the rate at which the samples predicted by the model to be positive are actually positive, and the value of this metric for the test set is equal to 0.3036 as a macro average.
+- Recall: Recall measures how much of the true positive samples the model can accurately predict and was measured at 0.3297 for the test set.
+- ROC & AUC: ROC is a probability curve and the area under it, AUC, represents the degree or measure of separability. As the area under the curve increases, the discrimination performance between classes increases. These areas were found to be 0.48 for class 0, 0.58 for class 1, and 0.94 for class 2.
 
 ## *Next Steps*
 - Choosing suitable machine learning algorithms for the predicting.
@@ -116,7 +124,6 @@ gantt
 
 
 #### *Contributors*
-Berk Ayata 120203013
 
 Burcu Ağu 116203010
 
