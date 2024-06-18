@@ -36,8 +36,7 @@ The following step in preprocessing involves checking for outliers.The 'Duration
 
 The function f.get_ydata was used. No outlier data was found for the Bechdel test, except for the 'Duration' column. As data dropping operations are performed, inconsistencies arise with the indices. Therefore, to prevent this, the index count is reset. 
 
-##### You can click the link below for interactive graphs
-[Interactive Graphs](https://app.powerbi.com/groups/me/reports/e04c71c1-601f-4fc9-b530-55bd7706bbba?ctid=da2fd848-1e41-4299-b410-7b1ec11c469b&pbi_source=linkShare)
+
 
 ### **RGB** 
 
@@ -66,7 +65,7 @@ Additionally, the following graphs were generated to visualize the distribution 
 
 ![Ekran görüntüsü 2024-06-18 090111](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/39742f30-d0eb-42e0-bc3e-5ef437cbca0f)
 
-### You can click the link below for interactive graphs
+#### You can click the link below for interactive graphs
 [Interactive Graphs](https://app.powerbi.com/groups/me/reports/e04c71c1-601f-4fc9-b530-55bd7706bbba?ctid=da2fd848-1e41-4299-b410-7b1ec11c469b&pbi_source=linkShare)
 
 ## *Model Training*
