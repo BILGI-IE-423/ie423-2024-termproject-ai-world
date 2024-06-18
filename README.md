@@ -49,6 +49,17 @@ Since we did not have enough data for each director at this stage, this posed a 
 
 ## *Model Training*
 
+During the model training phase, director class columns were mapped to Y and the remaining columns were mapped to X, and the data was divided into 80 percent and 20 percent train-test sets. Then, min max scaler was used to scale the data.
+In the following stage, logistic regression, SVM, kNN, AdaBoost, and Neural Network algorithms were tried for various hyperparameters and the best result was sought.
+The best parameters and average scores found are as follows.
+- Best Mean Parameters for Logistic Regression : 'C': 0.1, 'Class Weight': None,  with a mean score of 0.8744
+- Best Mean Parameters for SVM Regression : C': 0.5, 'Kernel': 'linear', 'Class Weight': 'balanced',  with a mean score of 0.8769
+- Best Mean Parameters for kNN : 'neighbors': 9, 'Class Weight': 'uniform',  with a mean score of 0.8744
+- Best Mean Parameters for AdaBoost : 'n_estimators': 50, 'learning_rate': 0.01,  with a mean score of 0.8744
+- Best Mean Parametersfor Neural Network : {'Hidden Layers': (50,), 'Activation': 'tanh', 'Alpha': 0.01},  with a mean score of 0.8719
+
+According to the above results, the most suitable model was determined as SVM and therefore the SVM model was used in the determination phase.
+
 ## *Next Steps*
 - Choosing suitable machine learning algorithms for the predicting.
 - Splitting the preprocessed dataset into train and test sets.
