@@ -54,18 +54,18 @@ In addition to the previous encoding steps, a LabelEncoder process was also appl
 ***
 Since there was not enough data for each director at this stage, this posed a problem in finding the appropriate model. For this reason, directors were divided into clusters according to the number of occurrences in the data set. In the data set, directors with 1 or 2 films were divided into class0, directors with 3 or 4 films were divided into class1, and similarly, directors with 5 or 6 films were divided into class2. After completing this process, label coding was applied to the newly formed clusters. It used t-sne, a nonlinear data reduction technique that takes multidimensional data and uses it to represent the original data in two dimensions while preserving the original high-dimensional space between datasets. In this way, a data set that separates directors according to the number of films was observed. You can see this in the following graph. 
 
-![Ekran görüntüsü 2024-06-18 142427](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/6e49a113-174f-4c9d-acfd-4b9ef3a94fef)
+![Ekran görüntüsü 2024-06-18 173920](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/3c27d03c-e11b-43ce-b3fe-494066859654)
 
 ## *Model Training*
 
 During the model training phase, director class columns were mapped to Y and the remaining columns were mapped to X, and the data was divided into 80 percent and 20 percent train-test sets. Then, min max scaler was used to scale the data.
 In the following stage, logistic regression, SVM, kNN, AdaBoost, and Neural Network algorithms were tried for various hyperparameters and the best result was sought.
 The best parameters and average scores found are as follows.
-- Best Mean Parameters for Logistic Regression : 'C': 0.1, 'Class Weight': None,  with a mean score of 0.8744
-- Best Mean Parameters for SVM : C': 0.5, 'Kernel': 'linear', 'Class Weight': 'balanced',  with a mean score of 0.8769
-- Best Mean Parameters for kNN : 'neighbors': 7, 'Class Weight': 'uniform', with a mean score of 0.8744
-- Best Mean Parameters for AdaBoost : 'n_estimators': 50, 'learning_rate': 0.01,  with a mean score of 0.8744
-- Best Mean Parameters for Neural Network : {'Hidden Layers': (50,), 'Activation': 'tanh', 'Alpha': 0.001},  with a mean score of 0.8719
+- Best Mean Parameters for Logistic Regression : {'C': 0.1, 'Class Weight': None} with a mean score of 0.8744
+- Best Mean Parameters for SVM :  {'C': 0.5, 'Kernel': 'linear', 'Class Weight': 'balanced'} with a mean score of 0.8744
+- Best Mean Parameters for kNN :  {'neighbors': 9, 'Class Weight': 'uniform'} with a mean score of 0.8744
+- Best Mean Parameters for AdaBoost : {'n_estimators': 50, 'learning_rate': 0.01} with a mean score of 0.8744
+- Best Mean Parameters for Neural Network : {'Hidden Layers': (50,), 'Activation': 'tanh', 'Alpha': 0.01} with a mean score of 0.8719
 
 According to the above results, the most suitable model was determined as SVM and therefore the SVM model was used in the determination phase.
 
