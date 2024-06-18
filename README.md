@@ -33,7 +33,7 @@ In the next step, the first three actors' names from each row in the 'cast' colu
 The following step in preprocessing involves checking for outliers.The 'Duration' column was examined for outliers, and the data points with a value equal to 1, namely [136, 169, 221, 229, 246, 247], were removed from the dataset. The function f.get_ydata was used. No outlier data was found for the Bechdel test, except for the 'Duration' column. As data dropping operations are performed, inconsistencies arise with the indices. Therefore, to prevent this, the index count is reset. 
 ### **RGB** 
 
-Following this, for each movie in the 'no_outlier_df' DataFrame, it calculates the normalized average of RGB components. This represents the percentage of each color in the image. These percentages are then added to new columns named 'Red', 'Green', and 'Blue'. If accessing an image fails, an error counter is incremented. Finally, the updated DataFrame, containing the RGB components of each image, is printed. Dropping operations were later carried out for the 55 URLs that were successfully accessed. The poster column was removed later because the desired red, green and blue color measurements were obtained from the posters. 
+Following this, for each movie in the 'no_outlier_df' DataFrame, it calculates the normalized average of RGB components. This represents the percentage of each color in the image. These percentages are then added to new columns named 'Red', 'Green', and 'Blue'. If accessing an image fails, an error counter is incremented. Finally, the updated DataFrame, containing the RGB components of each image, is printed. 
 
 ### **VGG16**
 
@@ -48,7 +48,7 @@ The next stage after removing the poster column is the encoding stage. Encoding 
 In addition to the previous encoding steps, a LabelEncoder process was also applied to the 'director' column. We also applied label encoding for clusters created based on similarity with features coming out of vgg16.
 
 ***
-Since we did not have enough data for each director at this stage, this posed a problem for our model. That's why we divided the directors into clusters according to the number of occurrences in our data set. In the data set, we separated the directors with 1 or 2 films as class0, the directors with 3 or 4 films as class1, and similarly the directors with 5 or 6 films as class2. After completing this process, we applied label encoding for the newly formed clusters. We utilized t-sne, which is a nonlinear data reduction technique that takes multidimensional data and uses it to represent the original data in two dimensions while maintaining the original high-dimensional space between the data sets. In this way, we were able to see what the data set that separates the directors according to the number of films found looks like.
+Since there was not enough data for each director at this stage, this posed a problem in finding the appropriate model. For this reason, directors were divided into clusters according to the number of occurrences in the data set. In the data set, directors with 1 or 2 films were divided into class0, directors with 3 or 4 films were divided into class1, and similarly, directors with 5 or 6 films were divided into class2. After completing this process, label coding was applied to the newly formed clusters. It used t-sne, a nonlinear data reduction technique that takes multidimensional data and uses it to represent the original data in two dimensions while preserving the original high-dimensional space between datasets. In this way, a data set that separates directors according to the number of films was observed.
 
 ## *Model Training*
 
@@ -73,14 +73,9 @@ We used Accuracy, Precision, Recall metrics and ROC curve methods to evaluate mo
 
 ## **Future Works**
 
-Since the data we have is limited and we cannot directly predict the director, more data can be collected, a more convenient data set can be created and a model that directly predicts the director can be developed.
+Since the data is limited and the applied model cannot directly predict the director, more data can be collected, a more convenient data set can be created and a new model that directly predicts the director can be developed.
 
-## *Next Steps*
-- Choosing suitable machine learning algorithms for the predicting.
-- Splitting the preprocessed dataset into train and test sets.
-- Model training, validation and testing.
-- Model evuluation
-  
+
 
 
 
