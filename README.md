@@ -18,10 +18,13 @@ In addition, the data set containing Bechdel tests scores of movies is used.
 
 A separate data set is used to obtain the necessary information about the posters of the movies.
 
+## *Utilized Libraries*
+The libraries pandas, numpy, seaborn, matplotlib.pyplot, sklearn.datasets, sklearn.metrics, sklearn.model_selection, sklearn.preprocessing, sklearn.svm, sklearn.linear_model, sklearn.neighbors, sklearn.metrics.confusion_matrix, sklearn.metrics.accuracy_score, sklearn.metrics.precision_score, sklearn.metrics.recall_score, sklearn.metrics.f1_score, sklearn.manifold.TSNE, sklearn.cluster.KMeans, sklearn.decomposition.PCA, requests, io.BytesIO, PIL.Image, tensorflow.keras.applications.VGG16, tensorflow.keras.preprocessing.image.img_to_array, tensorflow.keras.applications.vgg16.preprocess_input, matplotlib.pyplot, seaborn, sklearn.preprocessing.MinMaxScaler, sklearn.datasets, sklearn.metrics, sklearn.model_selection.train_test_split, sklearn.model_selection.cross_val_score, sklearn.preprocessing.StandardScaler, sklearn.svm.SVC, sklearn.linear_model.LogisticRegression, sklearn.neighbors.KNeighborsClassifier, sklearn.metrics.confusion_matrix, sklearn.metrics.accuracy_score, sklearn.metrics.precision_score, sklearn.metrics.recall_score, sklearn.metrics.f1_score, numpy have been used in this project. 
+
 ## *Preprocessing Steps*
 
 ### Detalied Explanation of Preprocessing Parts
-In this project, libraries such as Pandas, NumPy, Seaborn, Matplotlib.pyplot, sklearn.datasets, sklearn.metrics, sklearn.model_selection, sklearn.preprocessing.OneHotEncoder, and sklearn.preprocessing.StandardScaler were used.
+
 Initially, URLs containing CSV files were fetched, read, and converted into dataframes. Subsequently, dataframe names were changed to more meaningful ones.
 A for loop was then created to split the "Title" column and extract the year enclosed in parentheses. Additionally, "Title" entries, which start with a capital letter, were corrected to start with a lowercase "title".The dataframes netflix_df, prime_df, bechdel_df, and movieposter_df were merged. Null and duplicate data were regularly checked for and removed if any existed. The Netflix and Amazon datasets were merged based on the 'title' column, combining the datasets into one. Following this, three DataFrames were merged: merged_df and bechdel_df were merged based on the 'title' column into merged_bnp_df, and then merged_bnp_df and movieposter_df were merged based on the 'title' column into allmerged_df. Subsequently, the presence of duplicates in the merged data frame was checked. unwanted columns were removed from the dataset, such as 'show_id', 'date_added', 'imdbid', ', 'description',  'Imdb Link''year_y'.Then, the remaining columns were sorted in the desired order. Null data was initially examined, with 17 null values identified in the 'cast' column, 317 in the 'country' column, and 92 in the 'director' column. Following this assessment, subsequent operations were performed on the dataset. 
 
@@ -67,6 +70,10 @@ We used Accuracy, Precision, Recall metrics and ROC curve methods to evaluate mo
 - Precision: Precision is the rate at which the samples predicted by the model to be positive are actually positive, and the value of this metric for the test set is equal to 0.3036 as a macro average.
 - Recall: Recall measures how much of the true positive samples the model can accurately predict and was measured at 0.3297 for the test set.
 - ROC & AUC: ROC is a probability curve and the area under it, AUC, represents the degree or measure of separability. As the area under the curve increases, the discrimination performance between classes increases. These areas were found to be 0.48 for class 0, 0.58 for class 1, and 0.94 for class 2.
+
+## **Future Works**
+
+Since the data we have is limited and we cannot directly predict the director, more data can be collected, a more convenient data set can be created and a model that directly predicts the director can be developed.
 
 ## *Next Steps*
 - Choosing suitable machine learning algorithms for the predicting.
