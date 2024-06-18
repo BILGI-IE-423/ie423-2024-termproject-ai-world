@@ -163,20 +163,20 @@ gantt
        Image Preprocessing                                :done, des7, 2024-04-25, 5d
 
        section Modeling
-       Splitting train/test datasets                      :active, des8, 2024-05-04, 1d
-       Scaling                                            :active, des9, 2024-05-05, 5d
-       Method Determination                               :active, des10, 2024-05-05, 5d
-       Model Training                                     :active, des11, 2024-05-10, 5d
-       Model Validation                                   :active, des12, 2024-05-15, 4d
+       Splitting train/test datasets                      :done, des8, 2024-05-04, 1d
+       Scaling                                            :done, des9, 2024-05-05, 5d
+       Method Determination                               :done, des10, 2024-05-05, 5d
+       Model Training                                     :done, des11, 2024-05-10, 5d
+       Model Validation                                   :done, des12, 2024-05-15, 4d
 
        section Evaluating
-       Model Testing                                      :active, des13, 2024-05-20,5d
-       Model Evaluation                                   :active, des14, 2024-05-25, 5d
+       Model Testing                                      :done, des13, 2024-05-20,5d
+       Model Evaluation                                   :done, des14, 2024-05-25, 5d
 
-       section Website
-       Designing                                          :active, des15, 2024-06-01,7d
-       Coding                                             :active, des16, 2024-06-05,10d
-       Publishing                                         :active, des17, 2024-06-16, 1d
+       section Finalization
+       Designing                                          :done, des15, 2024-06-01,7d
+       Coding                                             :done, des16, 2024-06-05,10d
+       Publishing                                         :done, des17, 2024-06-16, 1d
     
 
 ```
