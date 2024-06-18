@@ -46,6 +46,49 @@ Following this, for each movie in the 'no_outlier_df' DataFrame, it calculates t
 
 VGG16 ( Visual Geometry Group) is a object detection and classification algorithm which is used for image object detection, image classification and facial recognition. We utilized VGG16 to extract features from posters and cluster them based on similarities. While clustering, we determined the number of clusters using elbow method as 6. 
 
+From the following graph, it can be seen that directors that are repeated only once is more that 350 while directors that are repeated 6 times is less than 50. This shows the imbalance in the data.
+![WhatsApp Image 2024-06-18 at 18 39 37](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/87c2b488-d261-4cfd-b350-cca8e0a231c1)
+
+From inspection, it can be seen that in cluster 1 posters with seas and blue colour are together, in cluster 2 main focus of the poster is human figures.  In cluster 3 posters are usually black and White with bigger text sizes than cluster 1 and 2. In cluster 4 posters are usually yellow and orange with smaller text sizes.  In cluster 5 main focus of the poster is once again human figures but now text size, colors and figure placement in the posters are different. And finally in the last cluster, posters get more colorful with green, pink, and red colours.
+
+Some posters selected according to the clusters created are listed below.
+
+- Cluster 1
+  
+  ![WhatsApp Image 2024-06-18 at 18 43 38](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/b4966e5b-a512-4067-af65-61786ba267c5)
+  ![WhatsApp Image 2024-06-18 at 18 43 39](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/f56822b1-4fea-4293-af14-5135cc0b6c6e)
+  ![WhatsApp Image 2024-06-18 at 18 43 39 (1)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/0b8191a8-5db5-4d72-88d0-4005e33130b4)
+  
+- Cluster 2 
+
+  ![WhatsApp Image 2024-06-18 at 18 44 15](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/42770473-a38b-4d53-8bf2-aed26a3719e0)
+  ![WhatsApp Image 2024-06-18 at 18 44 15 (2)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/a15d4c4a-0fd2-45f4-908b-fd5bf6753422)
+  ![WhatsApp Image 2024-06-18 at 18 44 15 (3)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/9a6fc63b-032b-4944-b9f2-544121e3703c)
+
+  - Cluster 3
+    
+  ![WhatsApp Image 2024-06-18 at 18 44 45](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/3bd5909e-01ea-4d29-9461-c4dc99669818)
+  ![WhatsApp Image 2024-06-18 at 18 44 46](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/a983c810-f1af-43c5-864e-6be8edfc4595)
+  ![WhatsApp Image 2024-06-18 at 18 44 46 (1)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/106c61eb-a05c-4c7d-ab9a-785963546b62)
+
+  - Cluster 4
+    
+    ![WhatsApp Image 2024-06-18 at 18 45 16](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/7fff6b1c-ea2b-4555-94a8-effce0b913f3)
+    ![WhatsApp Image 2024-06-18 at 18 45 16 (1)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/36df956c-d68d-4584-b085-3956ad1b748b)
+    ![WhatsApp Image 2024-06-18 at 18 45 16 (2)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/53e465a4-6aea-4ea0-b49a-091ea0c7d76b)
+
+  - Cluster 5
+
+     ![WhatsApp Image 2024-06-18 at 18 45 54](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/66dedb71-3caa-4487-9bf6-8b4cdebc4aec)
+    ![WhatsApp Image 2024-06-18 at 18 45 54 (1)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/d3b40cb0-01e0-4f2c-9517-0bd2e7f78e7d)
+    ![WhatsApp Image 2024-06-18 at 18 45 54 (2)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/86bdb999-14eb-4893-868b-755c2dedac8f)
+
+  - Cluster 6
+    
+    ![WhatsApp Image 2024-06-18 at 18 46 24](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/fcc3fd90-7e3e-468d-86a7-3a2e90ffa775)
+    ![WhatsApp Image 2024-06-18 at 18 46 24 (1)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/0146bcec-7c32-4503-b775-84a622131719)
+    ![WhatsApp Image 2024-06-18 at 18 46 24 (2)](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/1f169dfb-c910-48f6-a91f-1ba50a66c6ee)
+    
 ### **One-hot-encoding**
 
 The next stage after removing the poster column is the encoding stage. Encoding has been performed using OneHotEncoder. By selecting the 'Cast1', 'Cast2', and 'Cast3' columns, encoding has been done based on the 'cast' column. Before the encoding process began, the shape of the DataFrame was [576 rows × 17 columns]. After the initial encoding step, it reached [644 rows × 1457 columns].Following the encoding process based on the 'cast' column, encoding was then performed for the 'type', 'country', 'rating_merged', and 'Genre' columns. Subsequently, null values were dropped, resulting in the dataset becoming 508 rows × 1526 columns.
