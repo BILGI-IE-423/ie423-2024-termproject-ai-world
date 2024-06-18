@@ -66,6 +66,9 @@ Additionally, the following graphs were generated to visualize the distribution 
 
 ![Ekran görüntüsü 2024-06-18 090111](https://github.com/BILGI-IE-423/ie423-2024-termproject-ai-world/assets/162442906/39742f30-d0eb-42e0-bc3e-5ef437cbca0f)
 
+### You can click the link below for interactive graphs
+[Interactive Graphs](https://app.powerbi.com/groups/me/reports/e04c71c1-601f-4fc9-b530-55bd7706bbba?ctid=da2fd848-1e41-4299-b410-7b1ec11c469b&pbi_source=linkShare)
+
 ## *Model Training*
 
 During the model training phase, director class columns were mapped to Y and the remaining columns were mapped to X, and the data was divided into 80 percent and 20 percent train-test sets. Then, min max scaler was used to scale the data.
@@ -85,13 +88,13 @@ We used Accuracy, Precision, Recall metrics and ROC curve methods to evaluate mo
 - Accuracy: Accuracy is the ratio of examples that the model predicted correctly to the total predictions and it  is equal to 0.9020 for our test set.
 - Precision: Precision is the rate at which the samples predicted by the model to be positive are actually positive, and the value of this metric for the test set is equal to 0.3036 as a macro average.
 - Recall: Recall measures how much of the true positive samples the model can accurately predict and was measured at 0.3297 for the test set.
-- ROC & AUC: ROC is a probability curve and the area under it, AUC, represents the degree or measure of separability. As the area under the curve increases, the discrimination performance between classes increases. These areas were found to be 0.48 for class 0, 0.62 for class 1, and 0.94 for class 2.
+- ROC & AUC: ROC is a probability curve and the area under it, AUC, represents the degree or measure of separability. As the area under the curve increases, the discrimination performance between classes increases. These areas were found to be 0.52 for class 0, 0.59 for class 1, and 0.94 for class 2.
 
 ## **Future Works**
 
 Since the data is limited and the applied model cannot directly predict the director, more data can be collected, a more convenient data set can be created and a new model that directly predicts the director can be developed.
 
-
+----
 
 
 
