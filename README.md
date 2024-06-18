@@ -174,9 +174,8 @@ gantt
        Model Evaluation                                   :done, des14, 2024-05-25, 5d
 
        section Finalization
-       Designing                                          :done, des15, 2024-06-01,7d
-       Coding                                             :done, des16, 2024-06-05,10d
-       Publishing                                         :done, des17, 2024-06-18, 1d
+       Designing                                          :done, des15, 2024-06-01,5d
+       Publishing                                         :done, des16, 2024-06-18, 1d
     
 
 ```
