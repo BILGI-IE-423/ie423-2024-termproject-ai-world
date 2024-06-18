@@ -18,8 +18,8 @@ In addition, the data set containing Bechdel tests scores of movies is used.
 
 A separate data set is used to obtain the necessary information about the posters of the movies.
 
-## *Utilized Libraries*
-The libraries pandas, numpy, seaborn, matplotlib.pyplot, sklearn.datasets, sklearn.metrics, sklearn.model_selection, sklearn.preprocessing, sklearn.svm, sklearn.linear_model, sklearn.neighbors, sklearn.metrics.confusion_matrix, sklearn.metrics.accuracy_score, sklearn.metrics.precision_score, sklearn.metrics.recall_score, sklearn.metrics.f1_score, sklearn.manifold.TSNE, sklearn.cluster.KMeans, sklearn.decomposition.PCA, requests, io.BytesIO, PIL.Image, tensorflow.keras.applications.VGG16, tensorflow.keras.preprocessing.image.img_to_array, tensorflow.keras.applications.vgg16.preprocess_input, matplotlib.pyplot, seaborn, sklearn.preprocessing.MinMaxScaler, sklearn.datasets, sklearn.metrics, sklearn.model_selection.train_test_split, sklearn.model_selection.cross_val_score, sklearn.preprocessing.StandardScaler, sklearn.svm.SVC, sklearn.linear_model.LogisticRegression, sklearn.neighbors.KNeighborsClassifier, sklearn.metrics.confusion_matrix, sklearn.metrics.accuracy_score, sklearn.metrics.precision_score, sklearn.metrics.recall_score, sklearn.metrics.f1_score, numpy have been used in this project. 
+## *Some of the Utilized Libraries*
+The libraries pandas, numpy, seaborn, matplotlib, sklearn, sklearn, TensorFlow Keras have been used in this project. 
 
 ## *Preprocessing Steps*
 
@@ -62,10 +62,10 @@ During the model training phase, director class columns were mapped to Y and the
 In the following stage, logistic regression, SVM, kNN, AdaBoost, and Neural Network algorithms were tried for various hyperparameters and the best result was sought.
 The best parameters and average scores found are as follows.
 - Best Mean Parameters for Logistic Regression : 'C': 0.1, 'Class Weight': None,  with a mean score of 0.8744
-- Best Mean Parameters for SVM Regression : C': 0.5, 'Kernel': 'linear', 'Class Weight': 'balanced',  with a mean score of 0.8769
-- Best Mean Parameters for kNN : 'neighbors': 9, 'Class Weight': 'uniform',  with a mean score of 0.8744
+- Best Mean Parameters for SVM : C': 0.5, 'Kernel': 'linear', 'Class Weight': 'balanced',  with a mean score of 0.8769
+- Best Mean Parameters for kNN : 'neighbors': 7, 'Class Weight': 'uniform', with a mean score of 0.8744
 - Best Mean Parameters for AdaBoost : 'n_estimators': 50, 'learning_rate': 0.01,  with a mean score of 0.8744
-- Best Mean Parameters for Neural Network : {'Hidden Layers': (50,), 'Activation': 'tanh', 'Alpha': 0.01},  with a mean score of 0.8719
+- Best Mean Parameters for Neural Network : {'Hidden Layers': (50,), 'Activation': 'tanh', 'Alpha': 0.001},  with a mean score of 0.8719
 
 According to the above results, the most suitable model was determined as SVM and therefore the SVM model was used in the determination phase.
 
@@ -75,7 +75,7 @@ We used Accuracy, Precision, Recall metrics and ROC curve methods to evaluate mo
 - Accuracy: Accuracy is the ratio of examples that the model predicted correctly to the total predictions and it  is equal to 0.9020 for our test set.
 - Precision: Precision is the rate at which the samples predicted by the model to be positive are actually positive, and the value of this metric for the test set is equal to 0.3036 as a macro average.
 - Recall: Recall measures how much of the true positive samples the model can accurately predict and was measured at 0.3297 for the test set.
-- ROC & AUC: ROC is a probability curve and the area under it, AUC, represents the degree or measure of separability. As the area under the curve increases, the discrimination performance between classes increases. These areas were found to be 0.48 for class 0, 0.58 for class 1, and 0.94 for class 2.
+- ROC & AUC: ROC is a probability curve and the area under it, AUC, represents the degree or measure of separability. As the area under the curve increases, the discrimination performance between classes increases. These areas were found to be 0.48 for class 0, 0.62 for class 1, and 0.94 for class 2.
 
 ## **Future Works**
 
