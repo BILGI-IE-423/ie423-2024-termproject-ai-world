@@ -158,7 +158,7 @@ Additionally, the following graphs were generated to visualize the distribution 
 #### You can click the link below for interactive graphs
 [Interactive Graphs](https://app.powerbi.com/groups/me/reports/e04c71c1-601f-4fc9-b530-55bd7706bbba?ctid=da2fd848-1e41-4299-b410-7b1ec11c469b&pbi_source=linkShare)
 
-## *Model Training*
+## **Model Training**
 
 During the model training phase, director class columns were mapped to Y and the remaining columns were mapped to X, and the data was divided into 80 percent and 20 percent train-test sets. Then, min max scaler was used to scale the data.
 In the following stage, logistic regression, SVM, kNN, AdaBoost, and Neural Network algorithms were tried for various hyperparameters and the best result was sought.
@@ -192,7 +192,7 @@ Since the data is limited and the applied model cannot directly predict the dire
 
 ----
 
-
+## **Project Timeline**
 
 ```mermaid
 
@@ -203,28 +203,35 @@ gantt
        section Research
        Data Sets Rewiev                                   :done, des1, 2024-03-03,6d
        Additional Data Set Finding                        :done, des2, 2024-03-05,5d
-       Determining the Research Questions                 :done, des3, 2024-03-06,2024-04-07
+       Determining the Research Questions                 :done, des3, 2024-03-06,2024-04-02
+
+       section Feedback 1
+       Feedback                                           :done, des4, 2024-04-03,1d
+       Research Question Revision                         :done, des5, 2024-04-05,2d
 
        section Preprocessing
-       Merging Data Sets                                  :done, des4, 2024-04-25, 1d
-       Handling Missing,Outlier, Duplicate Data           :done, des5, 2024-04-25, 5d
-       Encoding                                           :done, des6, 2024-04-25, 5d
-       Image Preprocessing                                :done, des7, 2024-04-25, 5d
+       Merging Data Sets                                  :done, des6, 2024-04-13, 1d
+       Handling Missing,Outlier, Duplicate Data           :done, des7, 2024-04-14, 3d
+       Encoding of Categorical Data                       :done, des8, 2024-04-17, 2d
+       Image Preprocessing(RGB)                           :done, des9, 2024-04-19, 5d
+       Image Preprocessing(VGG16)                         :done, des9, 2024-04-24, 5d
+       Visualization                                      :done, des10, 2024-04-29,2d
+
+       section Feedback 2
+       Feedback                                           :done, des11, 2024-05-02,1d
+       Preprocessing Revision                             :done, des12, 2024-05-02,2d
 
        section Modeling
-       Splitting train/test datasets                      :done, des8, 2024-05-04, 1d
-       Scaling                                            :done, des9, 2024-05-05, 5d
-       Method Determination                               :done, des10, 2024-05-05, 5d
-       Model Training                                     :done, des11, 2024-05-10, 5d
-      
+       Splitting train/test datasets                      :done, des11, 2024-05-06, 2d
+       Scaling                                            :done, des12, 2024-05-08, 2d
+       Model Training                                     :done, des13, 2024-05-10, 5d
+       Model Determination                                :done, des14, 2024-05-15, 3d
+       Performance Measurement                            :done, des15, 2024-05-18, 5d
+       Model Testing                                      :done, des16, 2024-05-22, 5d
 
-       section Evaluating
-       Model Testing                                      :done, des12, 2024-05-20,5d
-       Model Evaluation                                   :done, des13, 2024-05-25, 5d
-
-       section Finalization
-       Final Checks                                       :done, des14, 2024-06-01,5d
-       Publishing                                         :done, des15, 2024-06-18, 1d
+       section Finalizing
+       Final Checks                                       :done, des17, 2024-06-01,5d
+       Publishing                                         :done, des18, 2024-06-18, 1d
     
 
 ```
