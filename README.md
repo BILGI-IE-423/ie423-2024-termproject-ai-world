@@ -1,27 +1,27 @@
 
-## *Director Prediction Based on the Film's Characteristics*
+## **Director Prediction Based on the Film's Characteristics**
 
 
-## *Principal Goals of the Project* 
+## **Principal Goals of the Project**
 The film industry is a complex environment where various factors influence the decisions behind movie production. One crucial aspect is the director, whose vision and style can impact the outcome of a film.The main purpose of the project is to predict the director by taking into account various features of the films. When generating predictions, factors including the movie's genre, cast, release year, length, type, rating, and description of the film are considered. In addition to these characteristics, Bechdel test scores and movie posters are also utilized to predict the director. These features have been considered to add new perspectives to predicting the film director.By incorporating a diverse range of features, the aim is to build a comprehensive model that can accurately predict the director of a given film.
 
-## *Resarch Questions* 
+## **Resarch Questions**
 - How accurately can we predict the director of a movie based on features such as cast, duration, genre, Bechdel score, IMDb score?
 - What are the most significant factors influencing the choice of director for a movie?
 - How does the performance of different machine learning algorithms compare in predicting movie directors based on film characteristics?
 
 
-## *Utilizing of the datasets*
+## **Utilizing of the datasets**
 First of all, two data sets contining Amazon Prime and Netflix movies and TV shows are used. These data sets provide details on the movie's titles, directors, casts, countries, and genres.
 
 In addition, the data set containing Bechdel tests scores of movies is used. 
 
 A separate data set is used to obtain the necessary information about the posters of the movies.
 
-## *Some of the Utilized Libraries*
+## **Some of the Utilized Libraries**
 The libraries pandas, numpy, seaborn, matplotlib, sklearn, sklearn, TensorFlow Keras, PIL, io,  have been used in this project. 
 
-## *Preprocessing Steps*
+## **Preprocessing Steps**
 
 ### Detalied Explanation of Preprocessing Parts
 
