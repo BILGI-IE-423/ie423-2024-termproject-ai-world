@@ -201,25 +201,20 @@ gantt
        title IE 423 Project Time Line
 
        section Research
-       Data Sets Rewiev                                   :done, des1, 2024-03-03,6d
-       Additional Data Set Finding                        :done, des2, 2024-03-05,5d
-       Determining the Research Questions                 :done, des3, 2024-03-06,2024-04-02
+       Data Sets Rewiev                                   :done, des1, 2024-03-03,7d
+       Additional Data Set Finding                        :done, des2, 2024-03-11,6d
+       Determining the Research Questions                 :done, des3, 2024-03-18,15d
 
-       section Feedback 1
-       Feedback                                           :done, des4, 2024-04-03,1d
-       Research Question Revision                         :done, des5, 2024-04-05,2d
 
        section Preprocessing
-       Merging Data Sets                                  :done, des6, 2024-04-13, 1d
-       Handling Missing,Outlier, Duplicate Data           :done, des7, 2024-04-14, 3d
-       Encoding of Categorical Data                       :done, des8, 2024-04-17, 2d
-       Image Preprocessing(RGB)                           :done, des9, 2024-04-19, 5d
-       Image Preprocessing(VGG16)                         :done, des9, 2024-04-24, 5d
-       Visualization                                      :done, des10, 2024-04-29,2d
+       Merging Data Sets                                  :done, des6, 2024-04-5, 1d
+       Handling Missing,Outlier, Duplicate Data           :done, des7, 2024-04-6, 4d
+       Encoding of Categorical Data                       :done, des8, 2024-04-11, 4d
+       Image Preprocessing(RGB)                           :done, des9, 2024-04-16, 5d
+       Image Preprocessing(VGG16)                         :done, des9, 2024-04-22, 5d
+       Visualization                                      :done, des10, 2024-04-28,2d
 
-       section Feedback 2
-       Feedback                                           :done, des11, 2024-05-02,1d
-       Preprocessing Revision                             :done, des12, 2024-05-02,2d
+
 
        section Modeling
        Splitting train/test datasets                      :done, des11, 2024-05-06, 2d
